@@ -8,7 +8,8 @@ module.exports = appInfo => {
   config.keys = appInfo.name + '_1542173716424_8415';
 
   // add your config here
-  config.middleware = [];
+  config.middleware = [ 'gzip' ];
+  config.gzip = { thresold: 1024 };
   config.mysql = {
     // 单数据库信息配置
     client: {
