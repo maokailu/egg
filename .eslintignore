@@ -1,1 +1,13 @@
 coverage
+clinet/src/vendor
+clinet/src/i18n
+clinet/src/resource
+
+**/*.css
+**/*.scss
+**/*.png
+**/*.svg
+**/*.md
+**/*.html
+**/*.xlsx
+**/*.json

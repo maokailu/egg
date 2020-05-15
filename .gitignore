@@ -10,3 +10,6 @@ run/
 .DS_Store
 *.sw*
 *.un~
+node_modules
+build/
+client/dist

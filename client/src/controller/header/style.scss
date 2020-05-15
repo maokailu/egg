@@ -1,0 +1,88 @@
+.header {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    .white{
+        color: #fff;
+    }
+    .blue{
+        color: #2681FF;
+    }
+    .head {
+        padding: 16px;
+        .logo-text{
+            font: 20px Helvetica Neue, Roboto, arial, sans-serif;
+        }
+        .logo {
+            width: 85px;
+            height: 20px;
+            background-size: 100% 100%;
+            display: inline-block;
+            margin-right: 2px;
+        }
+        .blue-logo{
+            width: 85px;
+            height: 20px;
+            background-size: 100% 100%;
+            display: inline-block;
+            margin-right: 2px;
+        }
+        .white-logo{    
+            width: 85px;
+            height: 20px;
+            background-size: 100% 100%;
+            display: inline-block;
+            margin-right: 2px;
+        }
+        .arrow {
+            vertical-align: top;
+            font-size: 20px;
+            color: #9b9b9b;
+            border-right: 1px solid #ddd;
+            margin-right: 4px;
+            transform: translateY(-2px);
+            display: inline-block;
+            height: 23px;
+        }
+        .book-title{
+            display: inline-block;
+            color: #fff;
+            margin-left: 10px;
+            span{
+                margin-left: 10px;
+                :first-child{
+                    margin-left: 0;
+                }
+            }
+            transform: translateY(-8px);font-size: 10px;
+        }
+    }
+    .main {
+        background: #fff;
+        padding: 0 20px;
+        overflow-x: hidden;
+        height: 100vh;
+        .home, .account, .bookings, .language, .currency, .help, .sign-out {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #ccc;
+            padding: 16px 0;
+            font-size: 16px;
+            .right {
+                color: #0288d1;
+            }
+        }
+        .account, .language, .sign-out {
+            border: none;
+            padding-bottom: 0;
+        }
+    }
+}
+
+.blue-back{
+    background-color: #0288d1;
+}
+.white-back{
+    background-color: #fff;
+}
+

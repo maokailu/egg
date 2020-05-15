@@ -1,0 +1,235 @@
+.search {
+    background-color: #EFEFF4;
+    .tab-flights {
+        color: #0288d1;
+    }
+}
+.category {
+    display: flex;
+    padding: 12px 0;
+    font-size: 16px;
+    span {
+        flex: 1;
+        text-align: center;
+        flex-direction: column;
+        display: flex;
+        i{
+            font-size: 24px;
+        }
+    }
+}
+.search-box {
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 2.5px 5px 0 rgba(212, 218, 226, 0.15);
+    border-radius: 8px;
+    padding: 16px;
+    margin: 0 16px 16px 16px;
+    .tab {
+        display: flex;
+        position: relative;
+        div {
+            flex: 1;
+            font-size: 14px;
+            padding: 8px 0;
+            text-align: center;
+            z-index: 1;
+            border: 1px solid #2681FF;
+            line-height: 17px;
+        }
+        .one_way {
+            border-left: none;
+            border-radius: 0 4px 4px 0;
+            margin-left: -1px;
+        }
+        .round{
+            border-radius: 4px 0 0 4px;
+        }
+        .toggle-bar {
+            background: #2681FF;
+            position: absolute;
+            width: 50%;
+            height: 100%;
+        }
+        .left-tab {
+            transform: translateX(0);
+            transition: transform .5s;
+            border-radius: 4px 0 0 4px;
+        }
+        .right-tab {
+            transform: translateX(100%);
+            transition: transform .5s;
+            border-radius: 0 4px 4px 0;
+        }
+    }
+
+    .box {
+        padding: 12px 0;
+        border-bottom: 1px solid #D8D8D8;
+        .tit {
+            font-size: 12px;
+            color: #999;
+            letter-spacing: 0;
+            line-height: 15px;
+        }
+        .rdate {
+            text-align: right;
+        }
+        .content {
+            font-size: 20px;
+            color: #333;
+            letter-spacing: 0;
+            line-height: 24px;
+        }
+        .gray{
+            color: rgba(0, 0, 0, 0.48);
+        }
+        .blue{
+            color: #2681FF;
+        }
+        .code {
+            font-size: 12px;
+            color: rgba(0, 0, 0, 0.48);
+            letter-spacing: 0;
+            line-height: 15px;
+        }
+        .week{
+            margin-left: 4px;
+        }
+        .minus{
+            display: inline-block;
+            font-size: 20px;
+            transform: translateY(3px);
+        }
+        .plus{
+            display: inline-block;
+            font-size: 20px;
+            transform: translateY(3px);
+        }
+        .number{
+            margin: 0 10px;
+        }
+        .class{
+            .content{
+                height: 40px;
+                overflow: hidden;
+                #swiper{
+                    .wrapper{
+                        .slide{
+                            // background:red;
+                            // height: 20%;
+                        }
+                    }
+                }
+            }
+
+        }
+        .passenger{
+            .tit{
+                text-align: right;
+            }
+        }
+            
+    }
+    .city{
+        position: relative;
+        .dcity-move{
+            transform: translateY(200%);
+            transition: transform .3s;
+        }
+        .acity-move{
+            transform: translateY(-200%);
+            transition: transform .3s;
+        }
+        .reduction{
+            transform: translateY(0);
+            transition: transform .3s;
+        }
+        .dcity{
+            width: 86.5%;
+        }
+        .toggle-btn{
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 32px;
+            color: #2681ff;
+            z-index: 2;
+        }
+    }
+    .hascolumn {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 0;
+        .hideReturnDate{
+            transform: translateX(calc(100% + 16px));
+            transition: transform 0.5s;
+        }
+        .showReturnDate{
+            transform: translateX(0);
+            transition: transform 0.5s;
+        }
+    }
+
+    .clearline{
+        border-bottom: none;
+    }
+    .search-btn {
+        background-image: linear-gradient(90deg,#FFB300 7%,#F57C00 92%);
+        box-shadow: 0 6px 6px 0 rgba(255,143,0,.3);
+        border-radius: 100px;
+        font-size: 20px;
+        color: #FFF;
+        letter-spacing: 0;
+        line-height: 24px;
+        text-align: center;
+        padding: 10px 0;
+    }
+}
+
+.footer-menu{
+    margin: 16px;
+    border-radius: 8px;
+    margin-top: 16px;
+    padding: 12px 0;
+    background: #fff;
+    box-shadow: 0 2.5px 5px 0 rgba(212, 218, 226, 0.26);
+    display: flex;
+    .left, .right{
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        span{
+            font-size: 16px;
+            color: #333;
+            letter-spacing: 0;
+            line-height: 20px;
+            margin-left: 4px;
+            display: flex;
+            align-items: center;
+        }
+        .icon-bookings {
+            background: url('../../resources/img/mybookings.png') no-repeat scroll 0 0;
+            background-size: 100% 100%;
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+        }
+        .icon-status {
+            background: url('../../resources/img/flight_status.png') no-repeat scroll 0 0;
+            background-size: 100% 100%;
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+        }
+    }
+    .left{
+        border-right: 1px solid rgba(0, 0, 0, 0.1);
+    }
+}
+.app-home{
+    color: red;
+}
