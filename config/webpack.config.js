@@ -5,13 +5,6 @@ var path = require('path');
 const { IS_PRODUCTION } = require('./config');
 
 module.exports = {
-    // context: path.resolve(__dirname, '../client/src'),
-    // entry: {
-    //     home: 'main.jsx',
-    //     list: 'controller/list/first.jsx',
-    //     detail: 'controller/detail/index.jsx',
-    //     book: 'controller/book/index.jsx'
-    // },
     stats: {
         performance: true,
         chunks: true
@@ -60,25 +53,25 @@ module.exports = {
         new BundleAnalyzerPlugin()
 
     ],
-    optimization: {
-        splitChunks: {
-            minSize: 0,
-            cacheGroups: {
-                common: {
-                    name: 'common/pages-common',
-                    chunks: 'all',
-                    minChunks: 2,
-                    priority: 0
-                },
-                styles: {
-                    name: 'style',
-                    test: /\.s?css/,
-                    chunks: 'all',
-                    enforce: true
-                }
-            }
-        }
-    },
+    // optimization: {
+    //     splitChunks: {
+    //         minSize: 0,
+    //         cacheGroups: {
+    //             common: {
+    //                 name: 'common/pages-common',
+    //                 chunks: 'all',
+    //                 minChunks: 2,
+    //                 priority: 0
+    //             },
+    //             styles: {
+    //                 name: 'style',
+    //                 test: /\.s?css/,
+    //                 chunks: 'all',
+    //                 enforce: true
+    //             }
+    //         }
+    //     }
+    // },
     externals: [ // todo
         // {
         //     'react': true,
@@ -90,12 +83,6 @@ module.exports = {
     ],
     resolve: {
         modules: [path.resolve(__dirname, '../client/src'), path.resolve(__dirname, '../app/controller/index.js'), 'node_modules'],
-        extensions: ['.js', '.jsx', '.json', 'ts', 'tsx'],
-        alias: {
-            header: path.resolve(__dirname, '../client/src/controller/header'),
-            footer: path.resolve(__dirname, '../client/src/controller/footer'),
-            citySelector: path.resolve(__dirname, '../client/src/common/citySelector'),
-            datePicker: path.resolve(__dirname, '../client/src/common/datePicker')
-        }
+        extensions: ['.js', '.jsx', '.json', 'ts', 'tsx']
     }
 };

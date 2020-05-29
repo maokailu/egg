@@ -1,9 +1,12 @@
 'use strict';
 
 const Controller = require('egg').Controller;
+const React = require('react');
 const { renderToString } = require('react-dom/server');
 const App  = require('../../client/dist/app.js');
-const React = require('react');
+// const List  = require('../../client/dist/list.js');
+const path = require('path');
+const fs = require('fs');
 
 class HomeController extends Controller {
     async index() {
@@ -43,8 +46,29 @@ class HomeController extends Controller {
         };
         ctx.cookies.set('username', 'mkl', options);
         // jsx -> html string
-        const content = renderToString(React.createElement(App.default));
+        const component =  renderToString(React.createElement(App.default));
+        const content = `
+        <html>
+          <head>
+            <title>ssr</title>
+          </head>
+          <body>
+            <div id="root">${component}</div>
+            <script src="/list.js"></script>
+          </body>
+        </html>`;
         ctx.body = content;
+    }
+    async list() {
+        const { ctx } = this;
+        ctx.status = 200;
+        const filePath = '/client/dist/list';
+        ctx.attachment(filePath);
+        ctx.set('Content-Type', 'application/octet-stream');
+
+        const buf = await fs.createReadStream(filePath);
+        ctx.body = buf;
+        // ctx.attachment('../../client/dist/list.js');
     }
 }
 

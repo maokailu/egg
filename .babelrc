@@ -1,3 +1,33 @@
 {
-  "presets": ["react", "es2015", "stage-0"]
+  "presets": [
+    [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": true,
+            "browsers": [
+              "defaults",
+              "not IE 11",
+              "not IE_Mob 11",
+              "maintained node versions"
+            ]
+          }
+        }
+    ],
+    [
+      "@babel/preset-react"
+    ]
+  ],
+  "plugins": [
+    [
+      "@babel/plugin-transform-runtime",
+      {
+          "corejs": 3,
+          "helpers": true, // 默认，可以不写
+          "regenerator": true, // 提供regeneratorRuntime, 用于编译async await
+          "useESModules": false, // 使用 es modules helpers, 减少 commonJS 语法代码
+          "absoluteRuntime": true // 是否跨项目引用 runtime
+      }
+    ]
+  ]
 }

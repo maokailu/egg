@@ -1,13 +1,14 @@
-// containers/Home.js
-import React, { useState } from 'react';
-import './controller/search/style.scss';
-function Home() {
+
+import React from 'react';
+import Tree from './controller/search/tree.jsx';
+export default function Home() {
     // const [count, setCount] = useState(0);
-    let count = 0;
     return (
-        <div className="app-home" onClick={()=>count++}>
-            <div>{count}</div>
+        <div>
+            <div>树结构组件</div>
+            <Tree />
         </div>
     );
 }
-export default Home;
+
+// ReactDom.hydrate(<Tree />, document.getElementById('root'));

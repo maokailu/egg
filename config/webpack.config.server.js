@@ -7,11 +7,12 @@ const config = webpackMerge(baseConfig, {
     mode: 'development',
     target: 'node',
     entry: {
-        app: path.resolve(__dirname, '../client/src/index.jsx')
+        app: path.resolve(__dirname, '../client/src/index.jsx'),
+        list: path.resolve(__dirname, '../client/src/controller/list/index.jsx')
     },
     output: {
         path: path.resolve(__dirname, '../client/dist'),
-        filename: 'app.js',
+        filename: '[name].js',
         libraryTarget: 'commonjs2'
     }
 });
